@@ -7,6 +7,8 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'halo_web.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-    url(r'^retrieve_image/')
+  
     url(r'^admin/', include(admin.site.urls)),
-)
+    url(r'^halo/',include('halo.urls', namespace = 'halo')),
+    )
+    
