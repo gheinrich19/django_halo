@@ -14,7 +14,9 @@ class TestView(TemplateView):
 		ocp_apim_subscription_key = "7480bf871b6f4b758c3975ae3b7de8af"
 		h = PyHalo(ocp_apim_subscription_key)
 		emblem_image_url = h.get_emblem_image("ummmYAAaaa")
-		stats = h.get_arena_service_records("ummmYAAaaa")
+		stats = h.get_arena_service_records("yams101390")
 		context['kills'] = stats['Results'][0]['Result']['ArenaStats']['TotalKills']
-		#context['kills'] = 'farts'
+		context['headshot'] = stats['Results'][0]['Result']['ArenaStats']['TotalHeadshots']
+
+
 		return context
